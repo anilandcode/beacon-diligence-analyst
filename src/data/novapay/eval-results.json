@@ -1,0 +1,657 @@
+{
+  "timestamp": "2026-05-31T12:28:30.395Z",
+  "mode": "DEMO_MODE",
+  "dataset": {
+    "documents": 18,
+    "controls": 16,
+    "evidence": 12,
+    "findings": 9,
+    "checklist": 10
+  },
+  "summary": {
+    "total": 85,
+    "passed": 85,
+    "failed": 0
+  },
+  "categories": [
+    {
+      "category": "citation_coverage",
+      "total": 23,
+      "passed": 23,
+      "failed": 0
+    },
+    {
+      "category": "control_status",
+      "total": 16,
+      "passed": 16,
+      "failed": 0
+    },
+    {
+      "category": "missing_evidence",
+      "total": 5,
+      "passed": 5,
+      "failed": 0
+    },
+    {
+      "category": "conflict_detection",
+      "total": 6,
+      "passed": 6,
+      "failed": 0
+    },
+    {
+      "category": "checklist_relevance",
+      "total": 25,
+      "passed": 25,
+      "failed": 0
+    },
+    {
+      "category": "no_legal_advice",
+      "total": 3,
+      "passed": 3,
+      "failed": 0
+    },
+    {
+      "category": "synthetic_disclosure",
+      "total": 7,
+      "passed": 7,
+      "failed": 0
+    }
+  ],
+  "results": [
+    {
+      "id": "eval-001",
+      "category": "citation_coverage",
+      "name": "Gap finding \"Business Continuity Plan Missing\" correctly has no evidence (missing doc)",
+      "passed": true,
+      "detail": "Finding finding-002 is a gap with 0 evidence — expected for missing documentation."
+    },
+    {
+      "id": "eval-002",
+      "category": "citation_coverage",
+      "name": "Gap finding \"Vendor Assessment Incomplete\" correctly has no evidence (missing doc)",
+      "passed": true,
+      "detail": "Finding finding-007 is a gap with 0 evidence — expected for missing documentation."
+    },
+    {
+      "id": "eval-003",
+      "category": "citation_coverage",
+      "name": "Risk finding \"Insurance Certificate Expired\" correctly has no evidence (expired document)",
+      "passed": true,
+      "detail": "Finding finding-005 is a risk about an expired document — no evidence excerpt needed."
+    },
+    {
+      "id": "eval-004",
+      "category": "citation_coverage",
+      "name": "Evidence ev-002 referenced by \"SOC 2 Type II Report Expired\" exists",
+      "passed": true,
+      "detail": "Evidence ev-002 found: \"The auditor identified one significant deficiency in the are...\""
+    },
+    {
+      "id": "eval-005",
+      "category": "citation_coverage",
+      "name": "Evidence ev-011 referenced by \"Conflicting AI Data-Use Language\" exists",
+      "passed": true,
+      "detail": "Evidence ev-011 found: \"Customer content is not used to train shared models. Custome...\""
+    },
+    {
+      "id": "eval-006",
+      "category": "citation_coverage",
+      "name": "Evidence ev-012 referenced by \"Conflicting AI Data-Use Language\" exists",
+      "passed": true,
+      "detail": "Evidence ev-012 found: \"Service data may be used to improve platform performance, in...\""
+    },
+    {
+      "id": "eval-007",
+      "category": "citation_coverage",
+      "name": "Evidence ev-003 referenced by \"Conflicting Data Retention Periods\" exists",
+      "passed": true,
+      "detail": "Evidence ev-003 found: \"Personal data shall be retained for a period of 36 months fo...\""
+    },
+    {
+      "id": "eval-008",
+      "category": "citation_coverage",
+      "name": "Evidence ev-004 referenced by \"Conflicting Data Retention Periods\" exists",
+      "passed": true,
+      "detail": "Evidence ev-004 found: \"We retain your personal data for 24 months from the date of ...\""
+    },
+    {
+      "id": "eval-009",
+      "category": "citation_coverage",
+      "name": "Evidence ev-002 referenced by \"Change Management Deficiency\" exists",
+      "passed": true,
+      "detail": "Evidence ev-002 found: \"The auditor identified one significant deficiency in the are...\""
+    },
+    {
+      "id": "eval-010",
+      "category": "citation_coverage",
+      "name": "Evidence ev-011 referenced by \"AI Data-Use Policy Lacks Board Approval\" exists",
+      "passed": true,
+      "detail": "Evidence ev-011 found: \"Customer content is not used to train shared models. Custome...\""
+    },
+    {
+      "id": "eval-011",
+      "category": "citation_coverage",
+      "name": "Evidence ev-001 referenced by \"Quarterly Access Review Evidence Missing\" exists",
+      "passed": true,
+      "detail": "Evidence ev-001 found: \"All employees shall be granted access on a need-to-know basi...\""
+    },
+    {
+      "id": "eval-012",
+      "category": "citation_coverage",
+      "name": "Evidence ev-001 references valid document",
+      "passed": true,
+      "detail": "Document doc-001 (\"Information Security Policy\") found."
+    },
+    {
+      "id": "eval-013",
+      "category": "citation_coverage",
+      "name": "Evidence ev-002 references valid document",
+      "passed": true,
+      "detail": "Document doc-003 (\"SOC 2 Type II Report\") found."
+    },
+    {
+      "id": "eval-014",
+      "category": "citation_coverage",
+      "name": "Evidence ev-003 references valid document",
+      "passed": true,
+      "detail": "Document doc-002 (\"Data Processing Agreement\") found."
+    },
+    {
+      "id": "eval-015",
+      "category": "citation_coverage",
+      "name": "Evidence ev-004 references valid document",
+      "passed": true,
+      "detail": "Document doc-004 (\"Privacy Policy\") found."
+    },
+    {
+      "id": "eval-016",
+      "category": "citation_coverage",
+      "name": "Evidence ev-005 references valid document",
+      "passed": true,
+      "detail": "Document doc-007 (\"Incident Response Plan\") found."
+    },
+    {
+      "id": "eval-017",
+      "category": "citation_coverage",
+      "name": "Evidence ev-006 references valid document",
+      "passed": true,
+      "detail": "Document doc-011 (\"Penetration Test Results\") found."
+    },
+    {
+      "id": "eval-018",
+      "category": "citation_coverage",
+      "name": "Evidence ev-007 references valid document",
+      "passed": true,
+      "detail": "Document doc-009 (\"API Security Documentation\") found."
+    },
+    {
+      "id": "eval-019",
+      "category": "citation_coverage",
+      "name": "Evidence ev-008 references valid document",
+      "passed": true,
+      "detail": "Document doc-003 (\"SOC 2 Type II Report\") found."
+    },
+    {
+      "id": "eval-020",
+      "category": "citation_coverage",
+      "name": "Evidence ev-009 references valid document",
+      "passed": true,
+      "detail": "Document doc-009 (\"API Security Documentation\") found."
+    },
+    {
+      "id": "eval-021",
+      "category": "citation_coverage",
+      "name": "Evidence ev-010 references valid document",
+      "passed": true,
+      "detail": "Document doc-018 (\"Access Control Matrix\") found."
+    },
+    {
+      "id": "eval-022",
+      "category": "citation_coverage",
+      "name": "Evidence ev-011 references valid document",
+      "passed": true,
+      "detail": "Document doc-016 (\"AI Data-Use Policy\") found."
+    },
+    {
+      "id": "eval-023",
+      "category": "citation_coverage",
+      "name": "Evidence ev-012 references valid document",
+      "passed": true,
+      "detail": "Document doc-008 (\"Master Services Agreement\") found."
+    },
+    {
+      "id": "eval-024",
+      "category": "control_status",
+      "name": "Control CC6.1 (Logical and Physical Access Controls) has evidence when covered",
+      "passed": true,
+      "detail": "2 evidence item(s) found for covered control."
+    },
+    {
+      "id": "eval-025",
+      "category": "control_status",
+      "name": "Control CC6.2 (User Authentication and Access Provisioning) has evidence when covered",
+      "passed": true,
+      "detail": "2 evidence item(s) found for covered control."
+    },
+    {
+      "id": "eval-026",
+      "category": "control_status",
+      "name": "Partial control CC6.3 has some evidence",
+      "passed": true,
+      "detail": "1 evidence item(s) for partial control."
+    },
+    {
+      "id": "eval-027",
+      "category": "control_status",
+      "name": "Control CC7.1 (Vulnerability Management) has evidence when covered",
+      "passed": true,
+      "detail": "2 evidence item(s) found for covered control."
+    },
+    {
+      "id": "eval-028",
+      "category": "control_status",
+      "name": "Partial control CC7.2 has some evidence",
+      "passed": true,
+      "detail": "1 evidence item(s) for partial control."
+    },
+    {
+      "id": "eval-029",
+      "category": "control_status",
+      "name": "Missing control CC8.1 has deficiency evidence",
+      "passed": true,
+      "detail": "Evidence ev-002 notes the deficiency: \"The auditor identified one significant deficiency in the area of change manageme...\""
+    },
+    {
+      "id": "eval-030",
+      "category": "control_status",
+      "name": "Conflicting control CC9.1 has multiple evidence items",
+      "passed": true,
+      "detail": "2 evidence items — conflict requires ≥2."
+    },
+    {
+      "id": "eval-031",
+      "category": "control_status",
+      "name": "Control A.5.1 (Information Security Policies) has evidence when covered",
+      "passed": true,
+      "detail": "1 evidence item(s) found for covered control."
+    },
+    {
+      "id": "eval-032",
+      "category": "control_status",
+      "name": "Partial control A.8.1 has some evidence",
+      "passed": true,
+      "detail": "1 evidence item(s) for partial control."
+    },
+    {
+      "id": "eval-033",
+      "category": "control_status",
+      "name": "Missing control A1.1 correctly has no direct evidence",
+      "passed": true,
+      "detail": "No evidence found — correct for missing control."
+    },
+    {
+      "id": "eval-034",
+      "category": "control_status",
+      "name": "Missing control A1.2 correctly has no direct evidence",
+      "passed": true,
+      "detail": "No evidence found — correct for missing control."
+    },
+    {
+      "id": "eval-035",
+      "category": "control_status",
+      "name": "Conflicting control C1.1 has multiple evidence items",
+      "passed": true,
+      "detail": "2 evidence items — conflict requires ≥2."
+    },
+    {
+      "id": "eval-036",
+      "category": "control_status",
+      "name": "Control C2.1 (Data Subject Rights) has evidence when covered",
+      "passed": true,
+      "detail": "1 evidence item(s) found for covered control."
+    },
+    {
+      "id": "eval-037",
+      "category": "control_status",
+      "name": "Partial control CC3.1 has some evidence",
+      "passed": true,
+      "detail": "1 evidence item(s) for partial control."
+    },
+    {
+      "id": "eval-038",
+      "category": "control_status",
+      "name": "Conflicting control DP1.1 has multiple evidence items",
+      "passed": true,
+      "detail": "2 evidence items — conflict requires ≥2."
+    },
+    {
+      "id": "eval-039",
+      "category": "control_status",
+      "name": "Partial control DP1.2 has some evidence",
+      "passed": true,
+      "detail": "1 evidence item(s) for partial control."
+    },
+    {
+      "id": "eval-040",
+      "category": "missing_evidence",
+      "name": "BCP-related control A1.1 is classified as missing",
+      "passed": true,
+      "detail": "Status: missing."
+    },
+    {
+      "id": "eval-041",
+      "category": "missing_evidence",
+      "name": "BCP-related control A1.1 has no evidence",
+      "passed": true,
+      "detail": "0 evidence items found."
+    },
+    {
+      "id": "eval-042",
+      "category": "missing_evidence",
+      "name": "BCP-related control A1.2 is classified as missing",
+      "passed": true,
+      "detail": "Status: missing."
+    },
+    {
+      "id": "eval-043",
+      "category": "missing_evidence",
+      "name": "BCP-related control A1.2 has no evidence",
+      "passed": true,
+      "detail": "0 evidence items found."
+    },
+    {
+      "id": "eval-044",
+      "category": "missing_evidence",
+      "name": "Business Continuity Plan is marked as missing",
+      "passed": true,
+      "detail": "Status: missing."
+    },
+    {
+      "id": "eval-045",
+      "category": "conflict_detection",
+      "name": "AI data-use conflict finding exists",
+      "passed": true,
+      "detail": "\"Conflicting AI Data-Use Language\" — severity: critical."
+    },
+    {
+      "id": "eval-046",
+      "category": "conflict_detection",
+      "name": "AI conflict finding has both conflicting evidence",
+      "passed": true,
+      "detail": "Evidence: ev-011, ev-012."
+    },
+    {
+      "id": "eval-047",
+      "category": "conflict_detection",
+      "name": "AI conflict finding is critical severity",
+      "passed": true,
+      "detail": "Severity: critical."
+    },
+    {
+      "id": "eval-048",
+      "category": "conflict_detection",
+      "name": "Data retention conflict finding exists",
+      "passed": true,
+      "detail": "\"Conflicting Data Retention Periods\" — severity: high."
+    },
+    {
+      "id": "eval-049",
+      "category": "conflict_detection",
+      "name": "DP1.1 control is classified as conflict",
+      "passed": true,
+      "detail": "Status: conflict."
+    },
+    {
+      "id": "eval-050",
+      "category": "conflict_detection",
+      "name": "C1.1 control is classified as conflict",
+      "passed": true,
+      "detail": "Status: conflict."
+    },
+    {
+      "id": "eval-051",
+      "category": "checklist_relevance",
+      "name": "Checklist cl-001 references findings or controls",
+      "passed": true,
+      "detail": "Findings: 1, Controls: 2."
+    },
+    {
+      "id": "eval-052",
+      "category": "checklist_relevance",
+      "name": "Checklist cl-002 references findings or controls",
+      "passed": true,
+      "detail": "Findings: 1, Controls: 2."
+    },
+    {
+      "id": "eval-053",
+      "category": "checklist_relevance",
+      "name": "Checklist cl-003 references findings or controls",
+      "passed": true,
+      "detail": "Findings: 1, Controls: 1."
+    },
+    {
+      "id": "eval-054",
+      "category": "checklist_relevance",
+      "name": "Checklist cl-004 references findings or controls",
+      "passed": true,
+      "detail": "Findings: 1, Controls: 1."
+    },
+    {
+      "id": "eval-055",
+      "category": "checklist_relevance",
+      "name": "Checklist cl-005 references findings or controls",
+      "passed": true,
+      "detail": "Findings: 1, Controls: 0."
+    },
+    {
+      "id": "eval-056",
+      "category": "checklist_relevance",
+      "name": "Checklist cl-006 references findings or controls",
+      "passed": true,
+      "detail": "Findings: 1, Controls: 1."
+    },
+    {
+      "id": "eval-057",
+      "category": "checklist_relevance",
+      "name": "Checklist cl-007 references findings or controls",
+      "passed": true,
+      "detail": "Findings: 1, Controls: 0."
+    },
+    {
+      "id": "eval-058",
+      "category": "checklist_relevance",
+      "name": "Checklist cl-008 references findings or controls",
+      "passed": true,
+      "detail": "Findings: 1, Controls: 1."
+    },
+    {
+      "id": "eval-059",
+      "category": "checklist_relevance",
+      "name": "Checklist cl-009 references findings or controls",
+      "passed": true,
+      "detail": "Findings: 1, Controls: 1."
+    },
+    {
+      "id": "eval-060",
+      "category": "checklist_relevance",
+      "name": "Checklist cl-010 references findings or controls",
+      "passed": true,
+      "detail": "Findings: 0, Controls: 1."
+    },
+    {
+      "id": "eval-061",
+      "category": "checklist_relevance",
+      "name": "Must-have cl-001 linked to critical/high finding",
+      "passed": true,
+      "detail": "Linked severities: critical."
+    },
+    {
+      "id": "eval-062",
+      "category": "checklist_relevance",
+      "name": "Must-have cl-002 linked to critical/high finding",
+      "passed": true,
+      "detail": "Linked severities: critical."
+    },
+    {
+      "id": "eval-063",
+      "category": "checklist_relevance",
+      "name": "Must-have cl-003 linked to critical/high finding",
+      "passed": true,
+      "detail": "Linked severities: critical."
+    },
+    {
+      "id": "eval-064",
+      "category": "checklist_relevance",
+      "name": "Must-have cl-004 linked to critical/high finding",
+      "passed": true,
+      "detail": "Linked severities: high."
+    },
+    {
+      "id": "eval-065",
+      "category": "checklist_relevance",
+      "name": "Must-have cl-005 linked to critical/high finding",
+      "passed": true,
+      "detail": "Linked severities: high."
+    },
+    {
+      "id": "eval-066",
+      "category": "checklist_relevance",
+      "name": "Checklist cl-001 has triggeredBy field",
+      "passed": true,
+      "detail": "Triggered by: ev-002 — SOC 2 Type II Report, §III."
+    },
+    {
+      "id": "eval-067",
+      "category": "checklist_relevance",
+      "name": "Checklist cl-002 has triggeredBy field",
+      "passed": true,
+      "detail": "Triggered by: Missing evidence — no document submitted."
+    },
+    {
+      "id": "eval-068",
+      "category": "checklist_relevance",
+      "name": "Checklist cl-003 has triggeredBy field",
+      "passed": true,
+      "detail": "Triggered by: ev-011 vs ev-012 — AI Data-Use Policy §3.1 vs MSA §7.4."
+    },
+    {
+      "id": "eval-069",
+      "category": "checklist_relevance",
+      "name": "Checklist cl-004 has triggeredBy field",
+      "passed": true,
+      "detail": "Triggered by: ev-003 vs ev-004 — DPA Art. 5 vs Privacy Policy."
+    },
+    {
+      "id": "eval-070",
+      "category": "checklist_relevance",
+      "name": "Checklist cl-005 has triggeredBy field",
+      "passed": true,
+      "detail": "Triggered by: Expired document — Insurance Certificate."
+    },
+    {
+      "id": "eval-071",
+      "category": "checklist_relevance",
+      "name": "Checklist cl-006 has triggeredBy field",
+      "passed": true,
+      "detail": "Triggered by: ev-002 — SOC 2 Type II Report, §III."
+    },
+    {
+      "id": "eval-072",
+      "category": "checklist_relevance",
+      "name": "Checklist cl-007 has triggeredBy field",
+      "passed": true,
+      "detail": "Triggered by: Draft document — Vendor Security Assessment."
+    },
+    {
+      "id": "eval-073",
+      "category": "checklist_relevance",
+      "name": "Checklist cl-008 has triggeredBy field",
+      "passed": true,
+      "detail": "Triggered by: ev-011 — AI Data-Use Policy metadata."
+    },
+    {
+      "id": "eval-074",
+      "category": "checklist_relevance",
+      "name": "Checklist cl-009 has triggeredBy field",
+      "passed": true,
+      "detail": "Triggered by: ev-001 — Information Security Policy, §4.2."
+    },
+    {
+      "id": "eval-075",
+      "category": "checklist_relevance",
+      "name": "Checklist cl-010 has triggeredBy field",
+      "passed": true,
+      "detail": "Triggered by: ev-006 — Penetration Test Results."
+    },
+    {
+      "id": "eval-076",
+      "category": "no_legal_advice",
+      "name": "Memo contains 'not legal advice' disclaimer",
+      "passed": true,
+      "detail": "Disclaimer found in memo.disclaimers."
+    },
+    {
+      "id": "eval-077",
+      "category": "no_legal_advice",
+      "name": "Memo conclusion avoids compliance certification claims",
+      "passed": true,
+      "detail": "Conclusion is appropriately cautious."
+    },
+    {
+      "id": "eval-078",
+      "category": "no_legal_advice",
+      "name": "Memo contains synthetic data disclaimer",
+      "passed": true,
+      "detail": "Synthetic disclaimer found."
+    },
+    {
+      "id": "eval-079",
+      "category": "synthetic_disclosure",
+      "name": "Documents reference fictional NovaPay AI company",
+      "passed": true,
+      "detail": "NovaPay AI referenced in document titles or content."
+    },
+    {
+      "id": "eval-080",
+      "category": "synthetic_disclosure",
+      "name": "Memo identifies as synthetic demo for fictional company",
+      "passed": true,
+      "detail": "Memo disclaimers reference synthetic/fictional data."
+    },
+    {
+      "id": "eval-081",
+      "category": "synthetic_disclosure",
+      "name": "Eval harness runs in DEMO_MODE",
+      "passed": true,
+      "detail": "This harness only evaluates synthetic data. DEMO_MODE=true."
+    },
+    {
+      "id": "eval-082",
+      "category": "synthetic_disclosure",
+      "name": "Memo disclaimer contains \"not legal advice\"",
+      "passed": true,
+      "detail": "Found \"not legal advice\" in disclaimers."
+    },
+    {
+      "id": "eval-083",
+      "category": "synthetic_disclosure",
+      "name": "Memo disclaimer contains \"synthetic\"",
+      "passed": true,
+      "detail": "Found \"synthetic\" in disclaimers."
+    },
+    {
+      "id": "eval-084",
+      "category": "synthetic_disclosure",
+      "name": "Memo disclaimer contains \"fictional\"",
+      "passed": true,
+      "detail": "Found \"fictional\" in disclaimers."
+    },
+    {
+      "id": "eval-085",
+      "category": "synthetic_disclosure",
+      "name": "Memo disclaimer contains \"illustration purposes\"",
+      "passed": true,
+      "detail": "Found \"illustration purposes\" in disclaimers."
+    }
+  ]
+}
