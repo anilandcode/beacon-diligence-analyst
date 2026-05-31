@@ -34,34 +34,24 @@ export default function AboutPage() {
         </p>
       </section>
 
-      {/* Product */}
+      {/* Product concept */}
       <section className="mb-10">
         <h2 className="text-lg font-medium text-structure mb-4 pb-2 border-b border-rule">
-          Product
+          Product Concept
         </h2>
         <p className="text-sm text-structure-secondary leading-relaxed mb-4">
           Beacon is a deterministic diligence analyst desk that reviews a synthetic
           diligence room for NovaPay AI, a fictional fintech AI startup. It
-          produces:
+          produces a cited diligence memo, control map, evidence graph, risk/gap
+          classification, and follow-up checklist.
         </p>
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-          {[
-            { title: "Cited Diligence Memo", desc: "Professional memo with evidence citations and disclaimers" },
-            { title: "Control Map", desc: "SOC2, ISO27001, GDPR controls mapped to evidence" },
-            { title: "Evidence Graph", desc: "Document → evidence → control → finding → follow-up traceability" },
-            { title: "Risk & Gap Classification", desc: "Critical, high, medium, low severity findings" },
-            { title: "Follow-Up Checklist", desc: "Prioritized questions grouped by owner" },
-            { title: "Eval Dashboard", desc: "85 deterministic tests across 7 categories" },
-          ].map((item) => (
-            <div key={item.title} className="p-3 border border-rule bg-surface-elevated">
-              <div className="text-sm font-medium text-structure mb-1">{item.title}</div>
-              <div className="text-xs text-structure-secondary">{item.desc}</div>
-            </div>
-          ))}
-        </div>
+        <blockquote className="text-sm text-structure italic leading-relaxed border-l-2 border-rule pl-4 mb-4">
+          &ldquo;Is NovaPay AI ready for enterprise diligence, what evidence
+          supports that, what gaps remain, and what should we ask before approval?&rdquo;
+        </blockquote>
       </section>
 
-      {/* Architecture Challenge */}
+      {/* Architecture challenge */}
       <section className="mb-10">
         <h2 className="text-lg font-medium text-structure mb-4 pb-2 border-b border-rule">
           Architecture Challenge
@@ -89,16 +79,31 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* What I Built */}
+      {/* What I built */}
       <section className="mb-10">
         <h2 className="text-lg font-medium text-structure mb-4 pb-2 border-b border-rule">
           What I Built
         </h2>
-        <ul className="space-y-2 text-sm text-structure-secondary">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-4">
+          {[
+            { title: "Cited Diligence Memo", desc: "Professional memo with evidence citations and disclaimers" },
+            { title: "Control Map", desc: "SOC2, ISO27001, GDPR controls mapped to evidence" },
+            { title: "Evidence Graph", desc: "Document → evidence → control → finding → follow-up traceability" },
+            { title: "Risk & Gap Classification", desc: "Critical, high, medium, low severity findings" },
+            { title: "Follow-Up Checklist", desc: "Prioritized questions grouped by owner" },
+            { title: "Eval Dashboard", desc: "85 deterministic tests across 7 categories" },
+          ].map((item) => (
+            <div key={item.title} className="p-3 border border-rule bg-surface-elevated">
+              <div className="text-sm font-medium text-structure mb-1">{item.title}</div>
+              <div className="text-xs text-structure-secondary">{item.desc}</div>
+            </div>
+          ))}
+        </div>
+        <ul className="space-y-1.5 text-sm text-structure-secondary">
           {[
             "Next.js 14 App Router with TypeScript and Tailwind CSS",
-            "Zod-validated domain model: documents, controls, evidence, findings, checklist, memo, evals",
-            "18 synthetic documents with 45 sections and 12 evidence excerpts",
+            "Zod-validated domain model: documents, controls, evidence, findings, checklist, memo",
+            "18 synthetic documents with 76 sections and 12 evidence excerpts",
             "16 controls across SOC2, ISO27001, GDPR, and custom frameworks",
             "9 findings with severity classification and recommendations",
             "10 follow-up checklist items grouped by Legal, Security, CTO/Product",
@@ -114,6 +119,62 @@ export default function AboutPage() {
             </li>
           ))}
         </ul>
+      </section>
+
+      {/* How Beacon differs */}
+      <section className="mb-10">
+        <h2 className="text-lg font-medium text-structure mb-4 pb-2 border-b border-rule">
+          How Beacon Differs from a Document Chatbot
+        </h2>
+        <div className="border border-rule bg-surface-elevated">
+          <div className="grid grid-cols-1 md:grid-cols-2 divide-y md:divide-y-0 md:divide-x divide-rule">
+            <div className="p-5">
+              <div className="font-sans text-2xs text-structure-muted uppercase tracking-wider mb-3">
+                Document Chatbot
+              </div>
+              <ul className="space-y-2 text-xs text-structure-secondary">
+                <li>User asks questions about documents</li>
+                <li>Answers may or may not cite sources</li>
+                <li>No control framework mapping</li>
+                <li>No conflict detection between documents</li>
+                <li>No missing evidence identification</li>
+                <li>No structured follow-up checklist</li>
+                <li>Results depend on model quality</li>
+              </ul>
+            </div>
+            <div className="p-5">
+              <div className="font-sans text-2xs text-status-covered uppercase tracking-wider mb-3">
+                Beacon Analyst Desk
+              </div>
+              <ul className="space-y-2 text-xs text-structure-secondary">
+                <li>Structured diligence review with control map</li>
+                <li>Every finding cites evidence or marks it missing</li>
+                <li>Controls mapped to SOC2, ISO27001, GDPR frameworks</li>
+                <li>Explicit conflict detection between documents</li>
+                <li>Missing evidence explicitly flagged</li>
+                <li>Follow-up checklist grouped by owner and priority</li>
+                <li>Deterministic results with eval harness validation</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Deterministic evaluation */}
+      <section className="mb-10">
+        <h2 className="text-lg font-medium text-structure mb-4 pb-2 border-b border-rule">
+          Deterministic Evaluation
+        </h2>
+        <p className="text-sm text-structure-secondary leading-relaxed mb-4">
+          Beacon includes a deterministic eval harness that validates the synthetic
+          dataset across 7 categories: citation coverage, control status correctness,
+          missing evidence detection, conflict detection, checklist relevance,
+          no-legal-advice language, and synthetic disclosure. All 85 tests pass.
+        </p>
+        <div className="font-sans text-2xs text-structure-muted">
+          These results validate deterministic behaviours in a synthetic demo.
+          Beacon does not provide legal, security, or compliance advice.
+        </div>
       </section>
 
       {/* Limitations */}

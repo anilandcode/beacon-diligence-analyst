@@ -25,7 +25,7 @@ export default function MemoPage() {
             Diligence Memo Preview
           </div>
           <h1 className="text-xl md:text-2xl font-medium text-structure">
-            NovaPay AI — Diligence Review
+            NovaPay AI — Enterprise Diligence Memo
           </h1>
         </div>
         <ExportButton label="Print Preview" />
@@ -60,6 +60,23 @@ export default function MemoPage() {
             </div>
           </div>
         </div>
+
+        {/* Overall Posture */}
+        <section className="mb-8 print-break-avoid">
+          <h2 className="text-lg font-medium text-structure mb-4 pb-2 border-b border-rule">
+            Overall Posture
+          </h2>
+          <div className="p-4 border border-status-missing/30 bg-status-missing/5">
+            <div className="font-sans text-xs text-status-missing font-medium uppercase tracking-wider mb-1">
+              Not Ready for Enterprise Approval
+            </div>
+            <p className="text-sm text-structure-secondary leading-relaxed">
+              Of {ctrlSummary.total} assessed controls, {ctrlSummary.covered} are covered, {ctrlSummary.partial} partially covered,
+              {" "}{ctrlSummary.missing} missing, and {ctrlSummary.conflict} contain conflicting evidence. Three critical-severity
+              findings require resolution before enterprise approval can be recommended.
+            </p>
+          </div>
+        </section>
 
         {/* Executive Summary */}
         <section className="mb-8">
