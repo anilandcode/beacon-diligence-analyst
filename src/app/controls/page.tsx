@@ -27,7 +27,7 @@ const statusStyles: Record<
 export default function ControlsPage() {
   const [activeFramework, setActiveFramework] = useState<string>("SOC2");
   const [statusFilter, setStatusFilter] = useState<ControlStatus | "all">("all");
-  const [selectedId, setSelectedId] = useState<string | null>(null);
+  const [selectedId, setSelectedId] = useState<string | null>("ctrl-006");
   const summary = getControlSummary();
 
   let filteredControls = controls.filter(
@@ -251,6 +251,20 @@ function ControlDetailRow({
         {control.description}
       </p>
 
+      {/* Labels */}
+      <div className="flex items-center gap-2 mt-2">
+        {uniqueFollowUps.length > 0 && (
+          <span className="font-sans text-2xs text-status-partial bg-status-partial/10 px-1.5 py-0.5">
+            Needs follow-up
+          </span>
+        )}
+        {(control.status === "missing" || control.status === "conflict") && (
+          <span className="font-sans text-2xs text-status-missing bg-status-missing/10 px-1.5 py-0.5">
+            Cited in memo
+          </span>
+        )}
+      </div>
+
       {control.notes && (
         <div className="mt-2 text-xs text-structure-muted italic">
           {control.notes}
@@ -452,6 +466,22 @@ function ControlInspector({
           </div>
         </div>
       )}
+
+      {/* Memo impact */}
+      <div className="mb-4 pb-4 border-b border-rule">
+        <div className="font-sans text-2xs text-structure-muted uppercase tracking-wider mb-1">
+          Memo Impact
+        </div>
+        <div className="text-xs text-structure-secondary">
+          {control.status === "missing"
+            ? "Listed as material gap in memo. Approval cannot proceed without evidence."
+            : control.status === "conflict"
+            ? "Flagged as conflict in memo. Requires resolution before approval."
+            : control.status === "partial"
+            ? "Noted as partially covered. Additional evidence recommended."
+            : "Control is covered. No action required in memo."}
+        </div>
+      </div>
 
       {/* Notes */}
       {control.notes && (

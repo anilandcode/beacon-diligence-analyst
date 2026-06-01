@@ -447,6 +447,24 @@ function EvidenceGraph({ scenario }: { scenario: string }) {
           )}
         </div>
       </div>
+
+      {/* Scenario summary */}
+      <div className="mt-4 pt-4 border-t border-rule">
+        <div className="font-sans text-2xs text-structure-muted uppercase tracking-wider mb-2">
+          Why This Matters
+        </div>
+        <p className="text-xs text-structure-secondary leading-relaxed">
+          {scenario === "ai-conflict"
+            ? "The AI Data-Use Policy states 'customer content is not used to train shared models' — supporting customer data protection. The MSA states 'service data may be used to improve platform performance' — a broader term that could include customer data. This contradiction creates material ambiguity about data usage and requires legal reconciliation before enterprise approval."
+            : scenario === "incident-response"
+            ? "The Incident Response Plan documents triage and escalation procedures, providing partial coverage for incident detection. However, testing evidence is limited — the plan exists but execution evidence is thin."
+            : scenario === "access-control"
+            ? "The Information Security Policy requires quarterly access reviews, providing partial coverage. However, no completion records were found — the policy exists but execution evidence is missing."
+            : scenario === "data-retention"
+            ? "The DPA specifies 36-month retention while the Privacy Policy specifies 24 months. These contradictory documents create compliance risk — the binding term is unclear."
+            : "The API Security Documentation and Penetration Test Results both support the encryption and vulnerability management controls. This is an example of well-covered evidence with no gaps."}
+        </p>
+      </div>
     </div>
   );
 }

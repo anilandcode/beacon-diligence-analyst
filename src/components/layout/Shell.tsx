@@ -112,7 +112,7 @@ export function Shell({ children }: ShellProps) {
       {/* Desktop navigation */}
       <nav className="hidden md:block border-b border-rule bg-surface-elevated no-print">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="flex items-center gap-1 overflow-x-auto">
+          <div className="flex items-center gap-1 overflow-x-auto scrollbar-hide">
             {navItems.map((item) => {
               const isActive =
                 pathname === item.href ||

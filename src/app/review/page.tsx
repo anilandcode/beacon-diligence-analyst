@@ -346,6 +346,29 @@ function FindingRow({
               </span>
             </div>
             <p className="text-xs text-structure-secondary mt-1">{finding.description}</p>
+            {/* Citation chips */}
+            {finding.evidenceIds.length > 0 && (
+              <div className="flex items-center gap-1.5 mt-2 flex-wrap">
+                <span className="font-sans text-2xs text-structure-muted">Evidence:</span>
+                {finding.evidenceIds.map((evId) => (
+                  <button
+                    key={evId}
+                    type="button"
+                    onMouseEnter={() => onEvidenceHover(evId)}
+                    onMouseLeave={() => onEvidenceHover(null)}
+                    onClick={(e) => { e.stopPropagation(); onEvidenceHover(evId); }}
+                    className="font-sans text-2xs font-mono text-status-review bg-status-review/10 px-1.5 py-0.5 hover:bg-status-review/20 transition-colors cursor-pointer"
+                  >
+                    [{evId}]
+                  </button>
+                ))}
+              </div>
+            )}
+            {finding.evidenceIds.length === 0 && (
+              <div className="font-sans text-2xs text-structure-muted mt-2 italic">
+                No evidence — marked missing/unsupported
+              </div>
+            )}
           </div>
         </div>
       </button>

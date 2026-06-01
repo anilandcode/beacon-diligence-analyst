@@ -121,6 +121,63 @@ export default function AboutPage() {
         </ul>
       </section>
 
+      {/* Product Previews */}
+      <section className="mb-10">
+        <h2 className="text-lg font-medium text-structure mb-4 pb-2 border-b border-rule">
+          Product Previews
+        </h2>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <Link href="/review" className="group border border-rule bg-surface-elevated p-4 hover:border-status-review transition-colors">
+            <div className="font-sans text-2xs text-structure-muted uppercase tracking-wider mb-2">Review Workspace</div>
+            <div className="text-sm font-medium text-structure mb-2 group-hover:text-status-review transition-colors">
+              Diligence Trace
+            </div>
+            <div className="text-xs text-structure-secondary mb-3">
+              18 documents reviewed, 16 controls assessed, 9 findings, 3 conflicts detected.
+            </div>
+            <div className="h-24 bg-surface-sunken border border-rule flex items-center justify-center">
+              <div className="text-center">
+                <div className="text-lg font-medium text-status-missing">Not Ready</div>
+                <div className="font-sans text-2xs text-structure-muted">Overall Posture</div>
+              </div>
+            </div>
+          </Link>
+
+          <Link href="/evidence" className="group border border-rule bg-surface-elevated p-4 hover:border-status-conflict transition-colors">
+            <div className="font-sans text-2xs text-structure-muted uppercase tracking-wider mb-2">Evidence Graph</div>
+            <div className="text-sm font-medium text-structure mb-2 group-hover:text-status-conflict transition-colors">
+              AI Data-Use Conflict
+            </div>
+            <div className="text-xs text-structure-secondary mb-3">
+              Document → evidence → control → finding → follow-up traceability.
+            </div>
+            <div className="h-24 bg-surface-sunken border border-rule flex items-center justify-center">
+              <div className="flex items-center gap-2 text-2xs">
+                <span className="px-1.5 py-1 bg-status-conflict/10 text-status-conflict">Policy</span>
+                <span className="text-structure-muted">→</span>
+                <span className="px-1.5 py-1 bg-status-conflict/10 text-status-conflict">Conflict</span>
+                <span className="text-structure-muted">→</span>
+                <span className="px-1.5 py-1 bg-risk-critical/10 text-risk-critical">Critical</span>
+              </div>
+            </div>
+          </Link>
+
+          <Link href="/memo" className="group border border-rule bg-surface-elevated p-4 hover:border-status-review transition-colors">
+            <div className="font-sans text-2xs text-structure-muted uppercase tracking-wider mb-2">Diligence Memo</div>
+            <div className="text-sm font-medium text-structure mb-2 group-hover:text-status-review transition-colors">
+              Export-Ready Preview
+            </div>
+            <div className="text-xs text-structure-secondary mb-3">
+              7 sections, cited findings, control summary, follow-up checklist.
+            </div>
+            <div className="h-24 bg-surface-sunken border border-rule p-3">
+              <div className="font-sans text-2xs text-structure-muted mb-1">NovaPay AI — Enterprise Diligence Memo</div>
+              <div className="text-2xs text-structure-secondary">Not Ready for Enterprise Approval</div>
+            </div>
+          </Link>
+        </div>
+      </section>
+
       {/* How Beacon differs */}
       <section className="mb-10">
         <h2 className="text-lg font-medium text-structure mb-4 pb-2 border-b border-rule">
