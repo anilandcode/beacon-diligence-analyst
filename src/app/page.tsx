@@ -4,7 +4,6 @@ import Link from "next/link";
 import {
   controls,
   findings,
-  checklist,
   memo,
   getControlSummary,
   getDocumentSummary,
